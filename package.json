@@ -1,11 +1,10 @@
 {
-  "name": "@blazity/nest-file-fastify",
+  "name": "@aprilnea/nest-file-fastify",
   "version": "1.0.0",
   "description": "fastify-multipart decorators for Nest.js",
   "license": "MIT",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
-  "homepage": "https://blazity.com/",
   "files": [
     "build/src"
   ],
@@ -32,6 +31,9 @@
     "clean": "rimraf build",
     "prepublishOnly": "yarn clean && npm run build"
   },
+  "dependencies": {
+    "@fastify/multipart": "^8.3.0"
+  },
   "devDependencies": {
     "@nestjs/common": "^8.0.6",
     "@nestjs/config": "^1.0.1",
@@ -47,12 +49,12 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",
     "fastify": "^3.21.3",
-    "fastify-multipart": "^5.0.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.2.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.3.0",
     "typescript": "^4.1.2"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
