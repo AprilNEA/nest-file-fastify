@@ -1,7 +1,16 @@
+> [!NOTE]
+> Note: This is a forked version of [aprilnea/nest-file-fastify](https://github.com/aprilnea/nest-file-fastify).
+> 
+> The original repository has not been updated for more than 3 years, so I have decided to continue maintaining this useful library. I have fixed many bugs and plan to keep improving the project.
+>
+> If you are looking for an actively maintained @fastify/multipart decorator library for Nest.js, feel free to use this version. I'll be working hard to maintain compatibility with the stock API while adding new features and fixing problems!
+
+---
+
 <div align="left">
   <h1> fastify-multipart for Nest.js</h1>
 
-[![Github Actions](https://img.shields.io/github/workflow/status/blazity/nest-file-fastify/Build?style=flat-square)](https://github.com/Blazity/nest-file-fastify)
+[![Github Actions](https://img.shields.io/github/workflow/status/aprilnea/nest-file-fastify/Build?style=flat-square)](https://github.com/aprilnea/nest-file-fastify)
 [![NPM](https://img.shields.io/npm/v/@aprilnea/nest-file-fastify.svg?style=flat-square)](https://www.npmjs.com/package/@aprilnea/nest-file-fastify)
 [![NPM](https://img.shields.io/npm/dm/@aprilnea/nest-file-fastify?style=flat-square)](https://www.npmjs.com/package/@aprilnea/nest-file-fastify)
 
@@ -37,7 +46,7 @@ app.register(fastyfyMultipart);
 
 ### Single file
 
-```ts
+```typescript
 import { FileInterceptor, UploadedFile, MemoryStorageFile } from '@aprilnea/nest-file-fastify';
 
 @Post('upload')
@@ -55,7 +64,7 @@ uploadFile(@UploadedFile() file: MemoryStorageFile) {
 
 ### Array of files
 
-```ts
+```typescript
 import { FilesInterceptor, UploadedFiles, MemoryStorageFile } from '@aprilnea/nest-file-fastify';
 
 @Post('upload')
@@ -75,7 +84,7 @@ uploadFile(@UploadedFiles() files: MemoryStorageFile[]) {
 
 ### Multiple files
 
-```ts
+```typescript
 import { FileFieldsInterceptor, UploadedFiles, MemoryStorageFile } from '@aprilnea/nest-file-fastify';
 
 @Post('upload')
@@ -96,7 +105,7 @@ uploadFile(@UploadedFiles() files: { avatar?: MemoryStorageFile[], background?: 
 
 ### Any files
 
-```ts
+```typescript
 import { AnyFilesInterceptor, UploadedFiles, MemoryStorageFile } from '@aprilnea/nest-file-fastify';
 
 @Post('upload')
